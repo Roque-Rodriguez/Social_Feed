@@ -13,6 +13,9 @@ const DisplayEntriesForm = (props) => {
         };
         console.log(newEntry);
         props.addNewEntryProperty(newEntry)
+
+        setName('');
+        setMessage('');
     }
 
     return ( 

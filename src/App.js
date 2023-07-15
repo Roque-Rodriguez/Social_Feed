@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import DisplayFeed from './Components/DisplayFeed/DisplayFeed';
 import DisplayEntriesForm from './Components/DisplayEntries/DisplayEntriesForm';
+//import LikeDislikeCounter from './Components/LikeDisLikeCounter/LikeDislikeCounter';
 
 
 
@@ -17,6 +18,7 @@ function App() {
     <div>
       <DisplayEntriesForm addNewEntryProperty={addNewEntry}></DisplayEntriesForm>
       <DisplayFeed parentEntries={entries}></DisplayFeed>
+      
     </div>
   );
 }
