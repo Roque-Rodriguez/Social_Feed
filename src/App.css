@@ -1,0 +1,39 @@
+.border-box {
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+.header {
+  background-color: white;
+  padding: 20px;
+
+}
+
+.header-title {
+  display: inline-block;
+  position: relative;
+}
+
+.header-title-fade {
+  background: linear-gradient(to right, black, lightgrey);
+  background-clip: text;
+  
+}
+
+.app-container {
+  background-color: #b0e0e6; /* Baby blue color */
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.display-feed-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.container{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
