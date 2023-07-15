@@ -1,13 +1,23 @@
 import { useState } from "react";
 
-const DisplayEntriesForm = (prop) => {
+const DisplayEntriesForm = (props) => {
 
     const [name, setName] = useState('');
     const [message, setMessage] = useState('');
 
+    function handlesSubmit(event){
+        event.preventDefault();
+        let newEntry = {
+            name: name,
+            message: message
+        };
+        console.log(newEntry);
+        props.addNewEntryProperty(newEntry)
+    }
+
     return ( 
     
-        <form>
+        <form onSubmit={handlesSubmit}>
             <label>Name</label>
             <input type='text' value={name} onChange={(event) => setName(event.target.value)}/>
         
@@ -19,6 +29,7 @@ const DisplayEntriesForm = (prop) => {
                 maxLength={300}
                 required
             />
+            <button type='submit'>Submit</button>
         </form>
     
      );
